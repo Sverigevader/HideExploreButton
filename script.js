@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name     YouTube - Remove Trending button
+// @name     YouTube - Remove Explore button
 // @version  1
 // @grant    none
 // @include	*://youtube.com/*
@@ -9,7 +9,7 @@
 
 window.setTimeout(
 	function check() {
-		if (document.querySelector('[title="Trending"]')) {
+		if (document.querySelector('[title="Explore"]')) {
 		  main();
 		}
 		window.setTimeout(check, 250);
@@ -17,6 +17,6 @@ window.setTimeout(
 );
 
 function main() {
-    var node = document.querySelector('[title="Trending"]');
+    var node = document.querySelector('[title="Explore"]');
     node.style.display = "none";
 }
